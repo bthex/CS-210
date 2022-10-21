@@ -1,0 +1,150 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: CornerGrocer
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/bretthex/CLionProjects/CornerGrocer/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target CornerGrocer
+
+
+#############################################
+# Order-only phony target for CornerGrocer
+
+build cmake_object_order_depends_target_CornerGrocer: phony || CMakeFiles/CornerGrocer.dir
+
+build CMakeFiles/CornerGrocer.dir/main.cpp.o: CXX_COMPILER__CornerGrocer_Debug /Users/bretthex/CLionProjects/CornerGrocer/main.cpp || cmake_object_order_depends_target_CornerGrocer
+  DEP_FILE = CMakeFiles/CornerGrocer.dir/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++20
+  INCLUDES = -I/Library/Frameworks/Python.framework/Versions/3.10/include/python3.10
+  OBJECT_DIR = CMakeFiles/CornerGrocer.dir
+  OBJECT_FILE_DIR = CMakeFiles/CornerGrocer.dir
+
+build CMakeFiles/CornerGrocer.dir/cpp_modules/cpp_modules.cpp.o: CXX_COMPILER__CornerGrocer_Debug /Users/bretthex/CLionProjects/CornerGrocer/cpp_modules/cpp_modules.cpp || cmake_object_order_depends_target_CornerGrocer
+  DEP_FILE = CMakeFiles/CornerGrocer.dir/cpp_modules/cpp_modules.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++20
+  INCLUDES = -I/Library/Frameworks/Python.framework/Versions/3.10/include/python3.10
+  OBJECT_DIR = CMakeFiles/CornerGrocer.dir
+  OBJECT_FILE_DIR = CMakeFiles/CornerGrocer.dir/cpp_modules
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target CornerGrocer
+
+
+#############################################
+# Link the executable ../dist/Darwin/CornerGrocer
+
+build ../dist/Darwin/CornerGrocer: CXX_EXECUTABLE_LINKER__CornerGrocer_Debug CMakeFiles/CornerGrocer.dir/main.cpp.o CMakeFiles/CornerGrocer.dir/cpp_modules/cpp_modules.cpp.o | /Library/Frameworks/Python.framework/Versions/3.10/lib/libpython3.10.dylib
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LINK_LIBRARIES = /Library/Frameworks/Python.framework/Versions/3.10/lib/libpython3.10.dylib
+  OBJECT_DIR = CMakeFiles/CornerGrocer.dir
+  POST_BUILD = :
+  PRE_LINK = cd /Users/bretthex/CLionProjects/CornerGrocer/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E copy_directory /Users/bretthex/CLionProjects/CornerGrocer/python_modules/ /Users/bretthex/CLionProjects/CornerGrocer/dist/Darwin/python_modules && cd /Users/bretthex/CLionProjects/CornerGrocer/cmake-build-debug
+  TARGET_FILE = ../dist/Darwin/CornerGrocer
+  TARGET_PDB = CornerGrocer.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/bretthex/CLionProjects/CornerGrocer/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/bretthex/CLionProjects/CornerGrocer/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/bretthex/CLionProjects/CornerGrocer -B/Users/bretthex/CLionProjects/CornerGrocer/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+build CornerGrocer: phony ../dist/Darwin/CornerGrocer
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/bretthex/CLionProjects/CornerGrocer/cmake-build-debug
+
+build all: phony ../dist/Darwin/CornerGrocer
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPython3.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPython3.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
